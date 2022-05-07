@@ -1,1 +1,1 @@
-#WCB Web Dev Template README
+Designing a website that has a timer ticking each page and doesn't reset. There will be recipe with pictures clickable links you to a website where you can find the varieties recipes. 
