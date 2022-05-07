@@ -12,7 +12,7 @@ h1 {
 }
 
 
-
+/* Footer */
 #footer {
     position: absolute;
     bottom: 0;
@@ -26,6 +26,7 @@ h1 {
     top: 0;
 }
 
+/* Recipe page*/
 .layout {
 
     display: grid;
@@ -45,21 +46,29 @@ h1 {
 }
 
 .grid {
-    width: 1366px;
-    height: 768px;
-  
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
     text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-items: center;
   }
 
-#home:hover {
+/* Navigation bar */
+.menu a:hover {
     background-color: rgba(139, 70, 70, 0.733);
+    color: black;
     border-radius: 5px;
 }
 
+.menu a:active {
+    background-color: #FF9376;
+    color: white;
+}
+/* Textarea */
 textarea {
     -webkit-box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0);
     box-shadow: 4px -4px 15px 0px #FF1F1F, 12px -11px 7px 0px #FF9376, 20px -5px 7px 0px #FFE264, 20px 6px 7px 0px #F6FF33, 13px 12px 17px 0px #FF9527, 2px 17px 17px 0px #FF0000, -9px 21px 18px 0px #FFF212, -9px 6px 11px 0px #FF0808, -11px -9px 11px 0px #FFFA17, -11px -9px 11px 0px #FFFA17, 5px 5px 15px 5px rgba(0, 0, 0, 0);
@@ -114,5 +123,19 @@ label {
     font-size: 30px;
     display: none;
     cursor: pointer;
+  }*/
+  
+  @media screen and (max-width: 800px) {
+      .column {
+          flex: 50%;
+          max-width: 50%;
+      }
+  }
+
+  @media screen and (max-width: 600px) {
+      .column {
+          flex: 100%;
+          max-width: 100%;
+      }
   }
   
