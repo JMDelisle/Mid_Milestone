@@ -20,54 +20,8 @@ h1 {
 #quotes {
     text-align: center;
 }
-/* Home Page cinevideo */
+/* Home Page Video */
 
-#backgroundcontainer { 
-    position: relative; 
-    margin: auto; 
-    width: 960px; 
-    height: 540px; 
-    border: 20px solid #fff; 
-    box-shadow: 0px 0px 10px #000; 
-    background: transparent url(/src/img/slomoveggys.mp4) no-repeat 0px 0px; 
-    -moz-animation: flipframes 3s infinite; 
-    -webkit-animation: flipframes 3s infinite; 
-    animation: flipframes 3s infinite;
-}
-
-@keyframes flipframes { 
-    0% { background-position: 0px 0px; } 
-    6.999% { background-position: 0px 0px; } 
-    7% { background-position: 0px -540px; } 
-    13.999% { background-position: 0px -540px; } 
-    14% { background-position: 0px -1080px; } 
-    20.999% { background-position: 0px -1080px; } 
-    21% { background-position: 0px -1620px; } 
-    27.999% { background-position: 0px -1620px; } 
-    28% { background-position: 0px -2160px; } 
-    34.999% { background-position: 0px -2160px; } 
-    35% { background-position: 0px -2700px; } 
-    41.999% { background-position: 0px -2700px; } 
-    42% { background-position: 0px -3240px; } 
-    48.999% { background-position: 0px -3240px; } 
-    49% { background-position: 0px -3780px; } 
-    54.999% { background-position: 0px -3780px; } 
-    55% { background-position: 0px -4320px; } 
-    61.999% { background-position: 0px -4320px; } 
-    62% { background-position: 0px -4860px; } 
-    68.999% { background-position: 0px -4860px; } 
-    69% { background-position: 0px -5400px; } 
-    75.999% { background-position: 0px -5400px; } 
-    76% { background-position: 0px -5940px; } 
-    82.999% { background-position: 0px -5940px; } 
-    83% { background-position: 0px -6480px; } 
-    89.999% { background-position: 0px -6480px; } 
-    90% { background-position: 0px -7020px; } 
-    94.999% { background-position: 0px -7020px; } 
-    95% { background-position: 0px -7560px; } 
-    99.999% { background-position: 0px -7560px; } 
-    100% { background-position: 0px 0px; } 
-}
 
 
 /* Footer */

@@ -48,13 +48,13 @@ function updatemenu() {
     );
 
     // finally combine our output list into one string of HTML and put it on the page
-    quizContainer.innerHTML = output.join('');
+    quizContainer.innerHTML = output.join(" ");
   }
 
   function showResults(){
 
     // gather answer containers from our quiz
-    const answerContainers = quizContainer.querySelectorAll('.answers');
+    const answerContainers = quizContainer.querySelectorAll(".answers");
 
     // keep track of user's answers
     let numCorrect = 0;
@@ -73,12 +73,12 @@ function updatemenu() {
         numCorrect++;
 
         // color the answers green
-        answerContainers[questionNumber].style.color = 'lightgreen';
+        answerContainers[questionNumber].style.color = "lightgreen";
       }
       // if answer is wrong or blank
       else{
         // color the answers red
-        answerContainers[questionNumber].style.color = 'red';
+        answerContainers[questionNumber].style.color = "red";
       }
     });
 
@@ -87,22 +87,22 @@ function updatemenu() {
   }
 
   function showSlide(n) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
+    slides[currentSlide].classList.remove("active-slide");
+    slides[n].classList.add("active-slide");
     currentSlide = n;
     if(currentSlide === 0){
-      previousButton.style.display = 'none';
+      previousButton.style.display = "none";
     }
     else{
-      previousButton.style.display = 'inline-block';
+      previousButton.style.display = "inline-block";
     }
     if(currentSlide === slides.length-1){
-      nextButton.style.display = 'none';
-      submitButton.style.display = 'inline-block';
+      nextButton.style.display = "none";
+      submitButton.style.display = "inline-block";
     }
     else{
-      nextButton.style.display = 'inline-block';
-      submitButton.style.display = 'none';
+      nextButton.style.display = "inline-block";
+      submitButton.style.display = "none";
     }
   }
 
@@ -115,9 +115,9 @@ function updatemenu() {
   }
 
   // Variables
-  const quizContainer = document.getElementById('quiz');
-  const resultsContainer = document.getElementById('results');
-  const submitButton = document.getElementById('submit');
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
   const myQuestions = [
     {
       question: "What should the internal cooking temperature for chicken?",
@@ -171,10 +171,8 @@ function updatemenu() {
   showSlide(currentSlide);
 
   // Event listeners
-  submitButton.addEventListener('click', showResults);
+  submitButton.addEventListener("click", showResults);
   previousButton.addEventListener("click", showPreviousSlide);
   nextButton.addEventListener("click", showNextSlide);
 })();
-// Got this from https://www.sitepoint.com/simple-javascript-quiz/
-
-
+// Credit goes to: https://www.sitepoint.com/simple-javascript-quiz/
