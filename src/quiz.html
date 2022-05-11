@@ -14,10 +14,10 @@
 
 <body>
 
-  <head>
+  <header>
     <h1>OneStop Meat Smoking</h1>
     <p id="quotes"><b>When I Barbecue Everyone Loves To Swallow My Meat!</b></p>
-  </head>
+  </header>
 
   <nav id="menu">
     <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
@@ -28,9 +28,17 @@
       <li><a href="#">Quiz Game</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </nav>    
+  </nav>
 
-
+  <section id="quizButton">
+    <div class="quiz-container">
+      <div id="quiz"></div>
+    </div>
+    <button id="previous">Previous Question</button>
+    <button id="next">Next Question</button>
+    <button id="submit">Submit Quiz</button>
+    <div id="results"></div>
+  </section>
 
 
   <footer id="footer">&copy;Jean-Marc Delisle</footer>
