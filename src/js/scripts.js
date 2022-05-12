@@ -176,3 +176,4 @@ function updatemenu() {
   nextButton.addEventListener("click", showNextSlide);
 })();
 // Credit goes to: https://www.sitepoint.com/simple-javascript-quiz/
+
