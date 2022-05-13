@@ -8,7 +8,7 @@ function updatemenu() {
   }
 }
 
-
+//========================================================
 
 // below is for quiz page
 (function(){
@@ -148,15 +148,26 @@ function updatemenu() {
       correctAnswer: "c"
     },
     {
-      question: "What is the most popular wood usded in smoking meats?",
+      question: "The meat is typically served with a strong what?",
       answers: {
-        a: "Hickory",
-        b: "Mesquite",
-        c: "Oak",
-        d: "Pine Branches"
+        a: "Horseradish",
+        b: "Hp Sauce",
+        c: "Ketchup",
+        d: "Mustard"
       },
-      correctAnswer: "c"
-    }  ];
+      correctAnswer: "a"
+    },  
+    {
+      question: "What causes the red/pink ring that appear in meat after it's been smoked?",
+      answers: {
+        a: "The ring shows that the meat is not yet fully cooked",
+        b: "A chemical reaction invlving nitrogen dioxide",
+        c: "Wood particles from charcoal that discolor the meat",
+      },
+      correctAnswer: "b"
+    }  
+
+  ];
 
   // Kick things off
   buildQuiz();
@@ -176,4 +187,94 @@ function updatemenu() {
   nextButton.addEventListener("click", showNextSlide);
 })();
 // Credit goes to: https://www.sitepoint.com/simple-javascript-quiz/
+//============================================
+let secondsRemaining;
+let intervalHandle;
+
+function resetPage(){
+
+	document.getElementById("inputArea_timer").style.display = "block";
+
+}
+
+function tick(){
+	// grab the h1
+	let timeDisplay = document.getElementById("time");
+
+	// turn the seconds into mm:ss
+	let min = Math.floor(secondsRemaining / 60);
+	let sec = secondsRemaining - (min * 60);
+
+	//add a leading zero (as a string value) if seconds less than 10
+	if (sec < 10) {
+		sec = "0" + sec;
+	}
+
+	// concatenate with colon
+	let message = min.toString() + ":" + sec;
+
+	// now change the display
+	timeDisplay.innerHTML = message;
+
+	// stop is down to zero
+	if (secondsRemaining === 0){
+		alert("Check your food!!");
+		clearInterval(intervalHandle);
+		resetPage();
+	}
+
+	//subtract from seconds remaining
+	secondsRemaining--;
+
+}
+
+function startCountdown(){
+
+	function resetPage(){
+		document.getElementById("inputArea_timer").style.display = "block";
+	}
+
+	// get countents of the "minutes" text box
+	let minutes = document.getElementById("minutes").value;
+	
+	// check if not a number
+	if (isNaN(minutes)){
+		alert("Please enter a number, only in minutes:");
+		return; // stops function if true
+	}
+
+	// how many seconds
+	secondsRemaining = minutes * 60;
+	
+	//every second, call the "tick" function
+	// have to make it into a variable so that you can stop the interval later!!!
+	intervalHandle = setInterval(tick, 1000);
+
+	// hide the form
+	//document.getElementById("inputArea").style.display = "none";
+
+
+}
+
+window.onload = function(){
+
+	// create input text box and give it an id of "min"
+	let inputMinutes = document.createElement("input");
+	inputMinutes.setAttribute("id", "minutes");
+	inputMinutes.setAttribute("type", "text");
+	
+	//create a button
+	let startButton = document.createElement("input");
+	startButton.setAttribute("type","button");
+	startButton.setAttribute("value","Start Countdown");
+	startButton.onclick = function(){
+		startCountdown();
+	};
+
+	//add to the DOM, to the div called "inputArea"
+	document.getElementById("inputArea_timer").appendChild(inputMinutes);
+	document.getElementById("inputArea_timer").appendChild(startButton)		
+
+}
+
 
