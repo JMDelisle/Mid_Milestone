@@ -157,15 +157,6 @@ function updatemenu() {
       },
       correctAnswer: "a"
     },  
-    {
-      question: "What causes the red-pink ring that appear in meat after it's been smoked?",
-      answers: {
-        a: "The ring shows that the meat is not yet fully cooked",
-        b: "A chemical reaction invlving nitrogen dioxide",
-        c: "Wood particles from charcoal that discolor the meat"
-      },
-      correctAnswer: "b"
-    }  
   ];
 
   // Kick things off
