@@ -2,5 +2,9 @@ Designing a website that has a timer ticking each page and doesn't reset. There 
 
 Had to scrap out the kitchen count down timer as I am not a 100% sure on how I was going to implement it.
 
+Having issues with footers, I am trying different options. 
+Other issues I am currently having is API issues. Just rewatching videos from lecture.
+
+There are some codes that I have used from overstack and also codepen. 
+
 Licenses will be base on images from Unsplash 
-Licenses 
