@@ -8,36 +8,32 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body id="homebackground">
+  <div id="wrapper">
+    <header id="contactbg">
+      <h1>OneStop Meat Smoking</h1>
+      <p id="quotes"><b>When I Barbecue Everyone Loves To Swallow My Meat!</b></p>
+    </header>
+
+    <nav id="menu">
+      <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
+        <li><a href="accessory.html">Accessory</a></li>
+        <li><a href="quiz.html">Quiz Game</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
 
-  <header class="header">
-    <h1>OneStop Meat Smoking</h1>
-    <p id="quotes"><b>When I Barbecue Everyone Loves To Swallow My Meat!</b></p>
-  </header>
-
-
-
-  <nav id="menu">
-    <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="recipe.html">Recipes</a></li>
-      <li><a href="accessory.html">Accessory</a></li>
-      <li><a href="quiz.html">Quiz Game</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-
-
-  <section>
-    <div class="container_blog">
-      <img id="business_logo" src="/src/img/businesslogo.jpg" alt="logo">
-      <div class="centered_blog"><b>Good day my fellow barbecuer!</b>
-        <p> At <b>OneStop Meat Smoking</b>, smoking meat is what we do. We take pride in our BBQ, which is a perfect
-          balance of
-          the right amount of smoke, and our delicious house-made sauces. In fact, we are the only restaurant,
+    <section>
+      <div class="container_blog">
+        <h2>Good day my fellow barbecuer!</h2>
+        <p id="welcome"> At <b>OneStop Meat Smoking</b>, smoking meat is what we do. We take pride in our BBQ, which is
+          a
+          perfect balance of the right amount of smoke, and our delicious house-made sauces. In fact, we are the only
+          restaurant,
           currently, in Edmonton with an outdoor smoker. That is also why we get the common questions of ‘what is the
           best wood for smoking meat?’<br>
 
@@ -47,15 +43,42 @@
           the meat and your smoker. Head on over to the accessory page to find out more on what type of wood you could
           use to smoke your food with today!</p>
       </div>
-    </div>
-  </section>
-  <div class="fixed_footer">
-    <footer>
-      <p id="footerName">&copy;Jean-Marc Delisle</p>
-    </footer>
-  </div>
+    </section>
 
-<script src="js/scripts.js" defer></script>
+
+    <aside>
+        <div class="row">
+          <div class="col m6 offset-m3">
+            <div class="card light-blue lighten-2">
+              <div class="card-content white-text">
+                <span class="card-title">Random Dad Jokes</span>
+                <h4 id="quote"></h4>
+
+                <div class="row">
+                  <div class="col m3 offset-m9" id="joke-button">
+                    <button type="button" class="btn light-blue lighten-1 flow-text" id="getJoke">next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </aside>
+
+
+
+
+
+
+
+    <div class="fixed_footer">
+      <footer>
+        <p id="footerName">&copy;Jean-Marc Delisle</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/scripts.js" defer></script>
+  </div>
 </body>
 
 </html>
