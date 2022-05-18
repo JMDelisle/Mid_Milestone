@@ -8,3 +8,4 @@ Other issues I am currently having is API issues. Just rewatching videos from le
 There are some codes that I have used from stackoverflow and also codepen. 
 
 Licenses will be base on images from Unsplash 
+I have pictures from https://www.bradleysmoker.com/ but I couldn't find their. I will be reaching out to them for permission.
