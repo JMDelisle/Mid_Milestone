@@ -25,39 +25,64 @@
       <li><a href="quiz.html">Quiz Game</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-  </nav>   
-  
-  
-<section  id="contact_target">
-  <div class="container1">
-    <h3>Please leave us a message!</h3>
-    <form action="#" id="contact_form">
-      <label id="first_name">First Name:</label>
-      <input name="first_name" type="text" required placeholder="John" />
-      <br>
-      <label id="last_name">Last Name:</label>
-      <input name="last_name" type="text" required placeholder="Doe" />
-      <br>
-      <label id="email">Email:</label>
-      <input name="email" type="email" required placeholder="you@domain.com" />
-      <br><br>
-      <label id="message">Message:</label><br>
-      <textarea name="message" cols="20" rows="10" placeholder="Enter your message here ..." required></textarea>
-      <div class="center">
-        <input id="myButton" type="submit" value="Submit">
-      </div>
-    </form>
+  </nav>
+
+  <section>
+    <div class="container_contact">
+      <form action="/action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" required placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" required placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label id="countryLabel" for="country">Country</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+              <option value="australia">Australia</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+  <div class="fixed_footer">
+    <footer>
+      <p id="footerName">&copy;Jean-Marc Delisle</p>
+    </footer>
+    <script src="js/scripts.js" defer></script>
+
   </div>
-</section>
-
-
-<div class="fixed_footer">
-  <footer>
-    <p id="footerName">&copy;Jean-Marc Delisle</p>
-  </footer>
-  <script src="js/scripts.js" defer></script>
-
-</div>
 </body>
 
 </html>
