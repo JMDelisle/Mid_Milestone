@@ -195,10 +195,11 @@ hr:after {
 /* Footer */
 .fixed_footer {
     display: flex;
+    margin: auto;
     justify-content: center;
     height: 30px;
     background: #0099CC;
-    margin-top: 25%;
+    margin-top: 27%;
 }
 
 
@@ -403,6 +404,7 @@ hr:after {
     background: rgba(148, 148, 148, 0.603);
     color: whitesmoke;
     max-width: 700px;
+    height: 250px;
     border-radius: 5px;
     margin: auto;
     text-align: center;
@@ -457,7 +459,6 @@ input[type=reset]:hover {
     border-radius: 5px;
     background-color: rgb(228, 9, 9, .2);
     padding: 20px;
-    top: 50px;
     max-width: 750px;
     margin: auto;
 }
@@ -512,7 +513,6 @@ button {
     font-size: 15px;
     background-color: #279;
     color: #fff;
-    border: 0px;
     border-radius: 5px;
     padding: 20px;
     cursor: pointer;
