@@ -19,22 +19,23 @@
   <nav id="menu">
     <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
     <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="recipe.html">Recipes</a></li>
-      <li><a href="accessory.html">Accessory</a></li>
-      <li><a href="quiz.html">Quiz Game</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="home.html" class="btn">Home</a></li>
+      <li><a href="recipe.html" class="btn">Recipes</a></li>
+      <li><a href="accessory.html" class="btn">Accessory</a></li>
+      <li><a href="quiz.html" class="btn">Quiz Game</a></li>
+      <li><a href="#" class="btn">Contact</a></li>
     </ul>
   </nav>
 
+  
   <div class="container_contact">
-    <form action="/action_page.php">
+    <form action="#" onsubmit="return validateForm()" name="myForm">
       <div class="row">
         <div class="col-25">
           <label for="fname">First Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" required placeholder="Your name..">
+          <input type="text" id="fname" name="firstName" placeholder="Your name..">
         </div>
       </div>
       <div class="row">
@@ -42,20 +43,17 @@
           <label for="lname">Last Name</label>
         </div>
         <div class="col-75">
-          <input type="text" id="lname" name="lastname" required placeholder="Your last name..">
+          <input type="text" id="lname" name="lastName" placeholder="Your last name..">
         </div>
       </div>
-
       <div class="row">
         <div class="col-25">
           <label for="email">Email</label>
         </div>
         <div class="col-75">
-          <input type="text" id="email" name="email" required placeholder="Your email..">
+          <input type="text" id="email" name="email" placeholder="Your email..">
         </div>
       </div>
-
-
       <div class="row">
         <div class="col-25">
           <label id="countryLabel" for="country">Country</label>
@@ -64,13 +62,12 @@
           <select id="country" name="country">
             <option value="canada">Canada</option>
             <option value="usa">USA</option>
-            <option value="australia">Australia</option>
           </select>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
-          <label for="subject">Subject</label>
+          <label for="subject">Message</label>
         </div>
         <div class="col-75">
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -83,6 +80,13 @@
     </form>
   </div>
 
+  <article class="diningblock">
+    <img src="img/dining.jpg" id="dining" alt="dining">
+    <div class="text-block">
+      <h4>OneStop Meat Smoking</h4>
+      <p>We hope you enjoyed your stay.</p>
+    </div>
+  </article>
 
 
   <div class="fixed_footer">

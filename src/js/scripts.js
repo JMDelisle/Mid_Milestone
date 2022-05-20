@@ -14,9 +14,9 @@ function updatemenu() {
 // Credit goes to: https://www.sitepoint.com/simple-javascript-quiz/
 
 //============================================
-(function(){
+(function () {
   // Functions
-  function buildQuiz(){
+  function buildQuiz() {
     // variable to store the HTML output
     const output = [];
 
@@ -28,7 +28,7 @@ function updatemenu() {
         const answers = [];
 
         // and for each available answer...
-        for(letter in currentQuestion.answers){
+        for (letter in currentQuestion.answers) {
 
           // ...add an HTML radio button
           answers.push(
@@ -54,7 +54,7 @@ function updatemenu() {
     quizContainer.innerHTML = output.join("");
   }
 
-  function showResults(){
+  function showResults() {
 
     // gather answer containers from our quiz
     const answerContainers = quizContainer.querySelectorAll('.answers');
@@ -63,7 +63,7 @@ function updatemenu() {
     let numCorrect = 0;
 
     // for each question...
-    myQuestions.forEach( (currentQuestion, questionNumber) => {
+    myQuestions.forEach((currentQuestion, questionNumber) => {
 
       // find selected answer
       const answerContainer = answerContainers[questionNumber];
@@ -71,7 +71,7 @@ function updatemenu() {
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
       // if answer is correct
-      if(userAnswer === currentQuestion.correctAnswer){
+      if (userAnswer === currentQuestion.correctAnswer) {
         // add to the number of correct answers
         numCorrect++;
 
@@ -79,7 +79,7 @@ function updatemenu() {
         answerContainers[questionNumber].style.color = 'lightgreen';
       }
       // if answer is wrong or blank
-      else{
+      else {
         // color the answers red
         answerContainers[questionNumber].style.color = 'red';
       }
@@ -93,17 +93,17 @@ function updatemenu() {
     slides[currentSlide].classList.remove('active-slide');
     slides[n].classList.add('active-slide');
     currentSlide = n;
-    if(currentSlide === 0){
+    if (currentSlide === 0) {
       previousButton.style.display = 'none';
     }
-    else{
+    else {
       previousButton.style.display = 'inline-block';
     }
-    if(currentSlide === slides.length-1){
+    if (currentSlide === slides.length - 1) {
       nextButton.style.display = 'none';
       submitButton.style.display = 'inline-block';
     }
-    else{
+    else {
       nextButton.style.display = 'inline-block';
       submitButton.style.display = 'none';
     }
@@ -123,7 +123,7 @@ function updatemenu() {
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "What should the internal cooking temperature for chicken?",
+      question: "What should the internal cooking temperature for chicken should be?",
       answers: {
         a: "265℉",
         b: "165℉",
@@ -132,7 +132,7 @@ function updatemenu() {
       correctAnswer: "b"
     },
     {
-      question: "When is national BBQ month?",
+      question: "When is the national BBQ month?",
       answers: {
         a: "July ",
         b: "May ",
@@ -141,7 +141,7 @@ function updatemenu() {
       correctAnswer: "b"
     },
     {
-      question: "What is the most popular wood usded in smoking meats?",
+      question: "What is the most popular wood used in smoking meats?",
       answers: {
         a: "Hickory",
         b: "Mesquite",
@@ -153,13 +153,13 @@ function updatemenu() {
     {
       question: "The meat is typically served with a strong what?",
       answers: {
-        a: "Horseradish",
+        a: "Mustard",
         b: "Hp Sauce",
         c: "Ketchup",
-        d: "Mustard"
+        d: "Horseradish"
       },
-      correctAnswer: "a"
-    },  
+      correctAnswer: "d"
+    },
   ];
 
   // Kick things off
@@ -181,7 +181,7 @@ function updatemenu() {
 })();
 
 //==============================================================
- 
+
 const button = document.querySelector(".containerJoke button");
 const jokeDiv = document.querySelector(".containerJoke .joke p");
 
@@ -198,7 +198,7 @@ async function getJoke() {
   const jokeObj = await jokeData.json();
   jokeDiv.innerHTML = jokeObj.joke;
   console.log(jokeData);
-}  
+}
 
 //===================================================================
 
@@ -271,7 +271,8 @@ const phrases = [
   'that burning 2x4 is not all',
   'that great but for firewood and',
   'that there is a difference',
-  'between knowing the right source of fuel to use!!',
+  'between knowing the right source', 
+  'of fuel to use!!',
   'Be Calm and Cook On!'
 ]
 
@@ -287,3 +288,29 @@ const next = () => {
 }
 
 next()
+
+/*function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}*/
+
+function validateForm() {
+  let firstName = document.forms["myForm"]["fname"].value;
+  let lastName = document.forms["myForm"]["lname"].value;
+  let email = document.forms["myForm"]["email"].value;
+  if (firstName == "") {
+    alert("First name must be filled out");
+    return false;
+  }
+  else if (lastName == "") {
+    alert("Last name must be filled out.")
+  }
+  else if (email == "") {
+    alert("Last name must be filled out.")
+  }
+}
+
+//=======================================================

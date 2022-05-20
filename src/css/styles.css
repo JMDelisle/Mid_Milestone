@@ -10,14 +10,58 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
+    flex: 1;
 }
+h5 {
+    color: white;
+    font-weight: 1000;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+#bbqfreak {
+    opacity: 0.8;
+    border-radius: 50%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 50px;
+}
+
+#bbqfreak:hover {
+    transform: scaleX(-1);
+
+}
+
+#dining {
+    max-width: 100%;
+    height: 800px;
+}
+
+.diningblock {
+    position: relative;
+}
+
+    /* Bottom right text */
+.text-block {
+    position: absolute;
+    bottom: 75px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+  }
 
 /* Home jokes */
 
 article {
     min-height: 100vh;
     width: 100%;
-    padding: 100px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,28 +138,23 @@ h3 {
     margin: 2rem auto;
 }
 
-h1,
-h2 {
+h1 {
     text-align: center;
     color: white;
 }
 
+#accessoryTitle{
+    text-align: center;
+    color: white;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
 #quotes {
     text-align: center;
     color: white;
 }
 
-
-.column {
-    float: left;
-    width: 50%;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 p {
     padding: 0 10px 0 10px;
@@ -129,11 +168,32 @@ p {
 #fuel4,
 #fuel5,
 #fuel6,
-#fuel7 {
+#fuel7,
+#fuel8 {
     margin: auto;
     display: block;
     width: 70%;
     height: 15em;
+}
+
+#fuel9,#fuel10 {
+    width: auto;
+    display: block;
+    width: 90%;
+    height: auto;
+    padding-left: 35px;
+}
+
+#fuel11 {
+    width: auto;
+    display: block;
+    width: 90%;
+    height: auto;
+    padding-left: 35px;
+}
+
+#charcoal {
+    text-align: center;
 }
 
 h6,
@@ -183,7 +243,7 @@ hr:after {
 #inner-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 15px;
 }
 
 #inner-grid>div {
@@ -195,12 +255,15 @@ hr:after {
 /* Footer */
 .fixed_footer {
     display: flex;
+    flex-direction: column;
+    min-height: 5vh;
     margin: auto;
     justify-content: center;
-    height: 30px;
+    text-align: center;
     background: #0099CC;
-    margin-top: 27%;
+
 }
+
 
 
 /* Recipe page*/
@@ -404,7 +467,7 @@ hr:after {
     background: rgba(148, 148, 148, 0.603);
     color: whitesmoke;
     max-width: 700px;
-    height: 250px;
+    height: auto;
     border-radius: 5px;
     margin: auto;
     text-align: center;
@@ -435,7 +498,8 @@ textarea {
     color: rgb(12, 11, 11);
 }
 
-input[type=submit], input[type=reset] {
+input[type=submit],
+input[type=reset] {
     background-color: #0099CC;
     color: white;
     margin: 0 auto;
@@ -456,16 +520,18 @@ input[type=reset]:hover {
 
 
 .container_contact {
-    border-radius: 5px;
+    border-radius: 25px;
     background-color: rgb(228, 9, 9, .2);
     padding: 20px;
     max-width: 750px;
     margin: auto;
+    margin-top: 20px;
 }
 
+/* Contact */
 .col-25 {
     float: left;
-    width: 10%;
+    width: 20%;
     margin-top: 6px;
     color: white;
 }
@@ -494,6 +560,25 @@ textarea:focus {
 #recipe_image {
     background: rgb(228, 9, 9, .2);
 }
+
+/* Accessory Page*/
+
+.column_1 {
+    float: left;
+    width: 50%;
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+}
+
+.row_accessory:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 
 /* Quiz */
 .answers {
@@ -637,10 +722,22 @@ button:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
-    .column, .col-25, .col-75, [type=submit], [type=reset] {
+    .column_1,
+    .column_2,
+    .col-25,
+    .col-75,
+
+    [type=submit],
+    [type=reset] {
         width: 100%;
         margin-top: 0;
     }
+}
+
+@media screen and (max-width: 800px){
+   #bbqfreak{
+    width: 100%;
+   }
 }
